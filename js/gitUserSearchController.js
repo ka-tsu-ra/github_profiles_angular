@@ -10,11 +10,8 @@ githubUserSearch.controller('GitUserSearchController', ['Search', 'Repos', funct
         });
       Repos.query(self.searchTerm)
         .then(function(response) {
-          console.log(response.data)
           self.repoResult = response.data;
         });
     }
   };
-
-
 }]);

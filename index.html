@@ -28,9 +28,9 @@
             <img ng-src="{{user.avatar_url}}&s=50" style="width:75px;height:75px;">
             <a ng-href="{{user.html_url}}">{{user.login}}</a>
             <br></br>
-            <ul class="list-group" ng-repeat="repo in searchCtrl.repoResult.items">
-              <li class="list-group-item">
-                <a ng-href="{{(repo[0]).html_url}}">{{(repo[0]).full_name}}</a>
+            <ul class="list-group" ng-repeat="repo in searchCtrl.repoResult">
+              <li class="list-group">
+                <a ng-href="{{repo.html_url}}">{{repo.name}}</a>
               </li>
             </ul>
           </li>
