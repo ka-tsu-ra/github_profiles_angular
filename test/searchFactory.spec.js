@@ -3,10 +3,12 @@ describe('factory: Search', function() {
   var search;
 
   beforeEach(module('GitUserSearch'));
+  // call the app module - otherwise it isnt available in the tests
 
   beforeEach(inject(function(Search) {
     search = Search;
   }));
+  // inject the Search factory into the module so that you can make references to it and therefore use it in the tests
 
   beforeEach(inject(function($httpBackend) {
     httpBackend = $httpBackend
@@ -16,6 +18,7 @@ describe('factory: Search', function() {
         { items: items }
       );
   }));
+  // inject httpBackend into the module and give it the stub info so that is returned in the tests
 
   var items = [
     {

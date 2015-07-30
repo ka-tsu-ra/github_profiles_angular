@@ -27,6 +27,12 @@
           <li class="list-group-item">
             <img ng-src="{{user.avatar_url}}&s=50" style="width:75px;height:75px;">
             <a ng-href="{{user.html_url}}">{{user.login}}</a>
+            <br></br>
+            <ul class="list-group" ng-repeat="repo in searchCtrl.repoResult.items">
+              <li class="list-group-item">
+                <a ng-href="{{(repo[0]).html_url}}">{{(repo[0]).full_name}}</a>
+              </li>
+            </ul>
           </li>
         </ul>
       </section>
@@ -35,5 +41,6 @@
     <script src="js/gitUserSearchController.js"></script>
     <script src="js/token.js"></script>
     <script src="js/searchFactory.js"></script>
+    <script src="js/reposFactory.js"></script>
   </body>
 </html>
